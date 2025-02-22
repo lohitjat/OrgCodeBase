@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute name="Var1" type="String" />
+    <aura:attribute name="Var2" type="String" />
+    <h1>
+        Text value is : {!v.Var1}
+    </h1>
+    <lightning:button label="ClickMe1" onclick = "{!c.handleClick}"/>
+    <hr>
+    </hr>
+        <h1>
+        
+    </h1>
+    <lightning:button label="ClickMe2" onclick = "{!c.handleClick}"/>
+</aura:component>

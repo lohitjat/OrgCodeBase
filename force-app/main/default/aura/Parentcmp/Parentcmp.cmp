@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="ValueInParent" type="String"/>
+    <p>Parent Component start here </p>
+    <c:childcmp aura:id="msg" parentAction="{!c.parentmethod}"/>
+    value from child in parent component : {!v.ValueInParent}
+    <p>Parent Component end here </p>
+	
+</aura:component>

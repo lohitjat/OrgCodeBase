@@ -1,0 +1,23 @@
+<apex:page standardcontroller="Account" >
+ <apex:pageBlock >
+ 
+ <apex:pageBlockSection title="AccountDetails" columns="1" >
+ <apex:outputField value="{!Account.Name}"/>
+ <apex:outputField value="{!Account.Industry}"/>
+ <apex:outputField value="{!Account.type}"/>
+ <apex:outputField value="{!Account.website}"/>
+ <apex:outputField value=" {!Account.Name}"/>
+ </apex:pageBlockSection>
+ 
+ <apex:pageBlockSection title="Complete Details">
+ <apex:detail relatedList="false"/>
+ </apex:pageBlockSection>
+ 
+ <apex:pageBlockSection >
+ 
+ </apex:pageBlockSection>
+  
+ </apex:pageBlock>
+ 
+
+</apex:page>

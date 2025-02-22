@@ -1,0 +1,13 @@
+<template>
+    <lightning-input type="checkbox" onchange={handleChange}>
+    </lightning-input>
+    <div>
+        <template if:true={isVisible}>
+            This is true Block !
+        </template>
+        <template if:false={isVisible}>
+            This is false Block !
+        </template>
+    </div>
+    
+</template>

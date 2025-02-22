@@ -1,0 +1,48 @@
+<template>
+    <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+    </template>
+    <lightning-card title="Account Search">
+        <lightning-input label="Search" value={searchTerm} onchange={handleSearchTermChange}></lightning-input>
+        <template if:true={accounts}>
+            <ul>
+                <template for:each={accounts} for:item="account">
+                    <li key={account.Id} onclick={handleAccountClick}  data-name={account.Name} data-id={account.Id}>{account.Name} - {account.Id}</li>
+                </template>
+            </ul>
+        </template>
+    </lightning-card>
+        <lightning-card title="Contact List">
+            <template if:true={contacts}>
+                <button class="slds-button slds-button_brand" onclick={addContact}>Add Contact</button>
+                <button class="slds-button slds-button_brand" onclick={Submit}> Submit</button>
+                <lightning-datatable
+                    key-field="Id"
+                    data={contacts}
+                    columns={columns}
+                    onrowaction={handleRowAction}
+                    hide-checkbox-column = "true"
+                ></lightning-datatable>
+            </template>
+            <template if:true={isModalOpen}>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+                <div class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <header class="slds-modal__header">
+                            <h2 class="slds-text-heading_medium">Details</h2>
+                        </header>
+                        <div class="slds-modal__content slds-p-around_medium">
+                            <!-- Add your details content here -->
+                            <lightning-input label="LastName" value={selectedRow.LastName} onchange={handleInputChange}></lightning-input>
+                            <lightning-input label="Email" value={selectedRow.Email} onchange={handleInputChange}></lightning-input>
+                            <lightning-input label="FirstName" value={selectedRow.FirstName} onchange={handleInputChange}></lightning-input>
+                        </div>
+                        <footer class="slds-modal__footer">
+                            <button class="slds-button slds-button_neutral" onclick={closeModal}>Close</button>
+                            <button class="slds-button slds-button_brand" onclick={saveChanges}>Save</button>
+                        </footer>
+                    </div>
+                </div>
+            </template>
+        </lightning-card>
+</template>

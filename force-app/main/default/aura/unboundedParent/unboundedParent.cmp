@@ -1,0 +1,10 @@
+<aura:component >
+    <aura:attribute name="parentAttr" type = "String" default ="parentDefault"/>
+    <c:unboundedChild childAttr="{!v.parentAttr}"/>
+    
+    <h1>
+        this is Parent Component {!v.parentAttr}
+    </h1>
+    <lightning:button label="ParentButton" onclick="{!c.handleParent}"/> 
+	
+</aura:component>

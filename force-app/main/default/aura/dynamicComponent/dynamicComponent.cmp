@@ -1,0 +1,10 @@
+<aura:component >
+    <aura:attribute name="message" type= "String" default="Button Not Clicked yet"/>
+    <aura:handler name = "init" value = "{!this}" action = "{!c.doinit}"/>
+    <p>Dynamic created button</p>
+    <br/><hr/>
+    {!v.body}
+    <br/><hr/>
+    Button Clicked : {!v.message}
+	
+</aura:component>

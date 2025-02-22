@@ -1,0 +1,9 @@
+<template>
+    <lightning-button label="Fetch Account" onclick={handleClick} ></lightning-button>
+    <lightning-button label="Reset" onclick={handleResetClick} ></lightning-button>
+    <template if:true={accounts}>
+        <template for:each={accounts} for:item="account">
+            <div key = {account.Id}>{account.Name}</div>
+        </template>
+    </template>
+</template>

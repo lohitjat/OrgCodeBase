@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Parent Component">
+        <c-child-com onsendmessage={handleEvent} ></c-child-com>
+        <div>{parentText}</div>
+    </lightning-card>
+
+    <lightning-card title ="File Input">
+        <lightning-input type="file"  accept=".csv" onchange={onfileupload}>
+        </lightning-input>
+    </lightning-card>
+</template>

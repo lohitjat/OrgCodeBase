@@ -1,0 +1,5 @@
+<aura:component >
+    ENter a number <ui:inputText aura:id="myComp"/>
+    <lightning:input aura:id="myComp2"/>
+    <lightning:button label="Submit"  onclick="{!c.handleClick}"/>
+</aura:component>

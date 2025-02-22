@@ -1,0 +1,5 @@
+<apex:page controller="accountController"  >
+ <apex:pageBlock title="client">
+ 
+ </apex:pageBlock>
+</apex:page>

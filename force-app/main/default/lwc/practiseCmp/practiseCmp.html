@@ -1,0 +1,12 @@
+<template>
+    <lightning-button onclick={handleclick} title="Button" label="Button"></lightning-button>
+    <template lwc:if={temp}>
+        <div>Temp value is true</div>
+    </template>
+    <template lwc:else>
+        <div>Temp value is false</div>
+    </template>
+    <template for:each={array} for:item="arr">
+        <li key={arr} >{arr}</li>
+    </template>
+</template>

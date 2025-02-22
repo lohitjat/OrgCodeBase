@@ -1,0 +1,25 @@
+<apex:page standardController="Project__c">
+  <apex:PageBlock title="Account Details">
+    <apex:tabPanel switchtype="client">
+      <apex:tab label="Basic Info">
+          <apex:pageBlockSection >
+          <apex:outputField value="{!Project__c.Name}"/>
+          <apex:outputField value="{!Project__c.Planned_Start_Date__c}"/>
+          <apex:outputField value="{!Project__c.Status__c}"/>
+          </apex:pageBlockSection>
+        
+      </apex:tab>
+      
+      <apex:tab label="Details">
+        <apex:detail relatedList="false"/>
+      </apex:tab>
+      
+      <apex:tab label="Engagements">
+        <apex:relatedList list="Engagements__r"/> 
+      </apex:tab>
+      
+     
+   
+    </apex:tabPanel>
+  </apex:PageBlock>
+</apex:page>
