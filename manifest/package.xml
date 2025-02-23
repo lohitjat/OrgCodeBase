@@ -32,5 +32,26 @@
         <members>*</members>
         <name>StaticResource</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomField</name>
+    </types>
+     <types>
+        <members>Account</members>
+        <members>Contact</members>
+        <members>Opportunity</members>
+        <members>Case</members>
+        <members>Lead</members>
+        <members>Product2</members>
+        <members>Pricebook2</members>
+        <members>Quote</members>
+        <members>Order</members>
+        <members>Contract</members>
+        <name>CustomObject</name>
+    </types>
     <version>59.0</version>
 </Package>

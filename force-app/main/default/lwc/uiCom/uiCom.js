@@ -6,7 +6,7 @@ export default class UiCom extends LightningElement {
     @track accounts;
 
     connectedCallback(){
-        getAccount()/////
+        getAccount()
         .then(results =>{
             this.accounts = results;
         })
